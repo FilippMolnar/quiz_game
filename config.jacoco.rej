@@ -1,0 +1,14 @@
+--- config.jacoco
++++ config.jacoco
+@@ -7,11 +7,5 @@ config {
+             additionalSourceDirs
+             additionalClassDirs
+         }
+-        jacocoTestReport {
+-            reports {
+-                xml {
+-                    enabled false
+-                }
+-
+     }
+ }

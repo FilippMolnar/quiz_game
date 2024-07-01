@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="parentGridPane" accessibleRole="TEXT" alignment="CENTER" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #625998; -fx-border-color: black;" stylesheets="@waiting_room.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.questions.QuestionMultiOptionsCtrl">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="33.0" />
+        <ColumnConstraints minWidth="10.0" percentWidth="33.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" percentWidth="33.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="33.0" vgrow="ALWAYS" />
+        <RowConstraints minHeight="10.0" percentHeight="43.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="23.0" prefHeight="30.0" />
+    </rowConstraints>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
+        <Text fx:id="questionNumber" fill="#d6d3ee" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 8/20">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </Text>
+        <Text fill="#d6d3ee" strokeType="OUTSIDE" strokeWidth="0.0" text="Which activity takes the most energy?">
+            <font>
+                <Font name="Marlett" size="24.0" />
+            </font>
+        </Text>
+    </VBox>
+    <GridPane alignment="CENTER" layoutX="13.0" layoutY="289.0" prefHeight="263.0" prefWidth="1269.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.99998474121094" minWidth="10.0" percentWidth="25.0" prefWidth="340.3999481201172" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.6000122070312" minWidth="0.0" percentWidth="21.0" prefWidth="77.60005187988281" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="40.0" percentWidth="10.0" prefWidth="154.60001220703123" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="595.3999694824219" minWidth="6.399987792968773" percentWidth="15.0" prefWidth="595.3999694824219" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="40.0" percentWidth="20.0" prefWidth="137.5999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.4000244140626" minWidth="0.0" percentWidth="8.3" prefWidth="151.4000244140626" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="426.0" minWidth="0.0" percentWidth="8.3" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="426.0" minWidth="10.0" percentWidth="8.3" prefWidth="10.400000000000091" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="426.0" minWidth="10.0" percentWidth="8.3" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="113.6" minHeight="10.0" prefHeight="77.0000244140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="51.199987792968756" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.20001220703125" minHeight="10.0" prefHeight="55.20001220703125" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <StackPane fx:id="joker3" onMouseClicked="#triggerJoker3" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <Circle fx:id="circle3" fill="#837aba" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fx:id="image3" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/client/pictures/joker_elim_wrong.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane fx:id="joker1" onMouseClicked="#triggerJoker1" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <Circle fx:id="circle1" fill="#837aba" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fx:id="image1" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/client/pictures/joker_double_points.png" />
+            </ImageView>
+        </StackPane>
+        <StackPane fx:id="joker2" onMouseClicked="#triggerJoker2" GridPane.columnIndex="7" GridPane.rowIndex="1">
+            <Circle fx:id="circle2" fill="#837aba" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fx:id="image2" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/client/pictures/joker_decrease_time.png" />
+            </ImageView>
+        </StackPane>
+        <Group GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <children>
+                <Rectangle arcWidth="5.0" fill="#625998" height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="60.0" />
+                <Circle fill="#837aba" layoutX="30.0" layoutY="30.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                <Arc fx:id="timerArc" fill="#d6d3ee" layoutX="30.0" layoutY="30.0" length="270.0" radiusX="30.0" radiusY="30.0" startAngle="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                <Circle fill="#625998" layoutX="30.0" layoutY="30.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                <HBox alignment="CENTER" layoutY="15.0" prefHeight="30.0" prefWidth="60.0">
+                    <children>
+                        <Text fx:id="timerValue" fill="#d6d3ee" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="24.80005168914795" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </children>
+        </Group>
+        <AnchorPane prefHeight="60.0" prefWidth="153.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <padding>
+                <Insets bottom="10.0" />
+            </padding>
+            <HBox alignment="CENTER" layoutX="73.0" layoutY="-5.0" prefHeight="60.0" prefWidth="214.0" styleClass="non-clickable" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <VBox alignment="CENTER">
+                    <Text fx:id="scoreText" fill="#d6d3ee" strokeType="OUTSIDE" strokeWidth="0.0" text="Score: 0">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Text>
+                </VBox>
+            </HBox>
+        </AnchorPane>
+        <Label fx:id="informationLabel" alignment="CENTER" prefHeight="51.0" prefWidth="1033.0" styleClass="info" text="Answer submitted!" textAlignment="CENTER" textFill="#d6d3ee" GridPane.columnIndex="4">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </GridPane>
+    <GridPane fx:id="images" alignment="CENTER" hgap="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="33.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="33.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="33.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="242.79998168945312" minHeight="10.0" percentHeight="60.0" prefHeight="210.59999389648436" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.20001220703122" minHeight="10.0" percentHeight="20.0" prefHeight="33.00000610351563" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.20001220703122" minHeight="10.0" percentHeight="20.0" prefHeight="107.8000244140625" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.20001220703122" minHeight="10.0" percentHeight="20.0" prefHeight="46.999975585937534" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+
+        <StackPane GridPane.columnIndex="2">
+         <Group StackPane.alignment="BOTTOM_CENTER">
+            <children>
+               <Label fx:id="countA" alignment="CENTER" prefHeight="17.0" prefWidth="78.0" text="countA">
+                  <padding>
+                     <Insets top="-40.0" />
+                  </padding>
+               </Label>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="154.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="80.0" />
+            </children>
+         </Group>
+            <ImageView fitHeight="91.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" StackPane.alignment="BOTTOM_CENTER">
+                <Image url="@/GoodActivities/33/Freezer.jpg" />
+            </ImageView>
+        </StackPane>
+        <StackPane GridPane.columnIndex="3">
+         <Group StackPane.alignment="BOTTOM_CENTER">
+            <children>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff" height="126.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="80.0" />
+               <Label fx:id="countB" alignment="CENTER" prefHeight="17.0" prefWidth="78.0" text="countB">
+                  <padding>
+                     <Insets top="-40.0" />
+                  </padding>
+               </Label>
+            </children>
+         </Group>
+            <ImageView fitHeight="88.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" StackPane.alignment="BOTTOM_CENTER">
+                <Image url="@/GoodActivities/33/Freezer.jpg" />
+            </ImageView>
+        </StackPane>
+        <StackPane prefHeight="175.0" prefWidth="322.0" GridPane.columnIndex="4">
+         <Group StackPane.alignment="BOTTOM_CENTER">
+            <children>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="52.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="80.0" />
+               <Label fx:id="countC" alignment="CENTER" prefHeight="17.0" prefWidth="78.0" text="countC">
+                  <padding>
+                     <Insets top="-40.0" />
+                  </padding>
+               </Label>
+            </children>
+         </Group>
+            <ImageView fitHeight="131.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" StackPane.alignment="BOTTOM_CENTER">
+                <Image url="@/GoodActivities/33/Freezer.jpg" />
+            </ImageView>
+        </StackPane>
+        <Button fx:id="optionA" mnemonicParsing="false" onAction="#pressedOption" prefHeight="74.0" prefWidth="206.0" styleClass="question-button" text="A" textAlignment="CENTER" textFill="#d6d3ee" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Button fx:id="optionB" alignment="CENTER" mnemonicParsing="false" onAction="#pressedOption" prefHeight="74.0" prefWidth="206.0" styleClass="question-button" text="B" textAlignment="CENTER" textFill="#d6d3ee" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.valignment="CENTER" />
+        <Button fx:id="optionC" mnemonicParsing="false" onAction="#pressedOption" prefHeight="74.0" prefWidth="206.0" styleClass="question-button" text="C" textAlignment="CENTER" textFill="#95bf74" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="3" />
+        <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#happyReact" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+            <Image url="@/client/pictures/happy.png" />
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="45.0" onMouseClicked="#angryReact" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+            <Image url="@/client/pictures/angry.png" />
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="45.0" onMouseClicked="#angelReact" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+            <Image url="@/client/pictures/angel.png" />
+        </ImageView>
+      <Label fx:id="cons_A" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Label fx:id="cons_B" text=" " GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Label fx:id="cons_C" text=" " GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+    </GridPane>
+
+    <ImageView fx:id="reaction" fitHeight="40.0" fitWidth="40.0" layoutX="12.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+    <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="552.0" layoutY="15.0" onMouseClicked="#backToHomeScreen" pickOnBounds="true" preserveRatio="true" styleClass="back_image" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+        <GridPane.margin>
+            <Insets left="10.0" top="40.0" />
+        </GridPane.margin>
+        <Image url="@/client/pictures/exit_button.png" />
+    </ImageView>
+</GridPane>

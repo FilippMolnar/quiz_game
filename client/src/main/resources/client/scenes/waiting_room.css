@@ -1,0 +1,69 @@
+#startGame {
+    -fx-background-color: #625998;
+}
+
+#startGame:hover {
+    -fx-background-color: #4B427D;
+    -fx-transition: ease-in;
+}
+
+.back_image:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-scale-z: 1.05;
+    -fx-transition: ease-in;
+    -fx-opacity: 0.8;
+}
+
+.button {
+    -fx-background-color: #837ABA;
+    -fx-background-radius: 50px;
+    -fx-min-width: 80px;
+    -fx-border-radius: 50px;
+}
+
+.button:hover {
+    -fx-background-color: #4B427D;
+    -fx-transition: ease-in;
+}
+
+.button:pressed {
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+
+.question-button {
+    -fx-background-color: #837ABA;
+    -fx-background-radius: 50px;
+    -fx-min-width: 80px;
+    -fx-border-radius: 50px;
+    -fx-text-fill: #D6D3EE;
+}
+.question-button:hover{
+    -fx-background-color: #4B427D;
+    -fx-transition: ease-in;
+}
+.question-button:pressed{
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+* {
+    -fx-text-fill: #D6D3EE;
+}
+.info{
+    -fx-text-fill: #D6D3EE;
+}
+.non-clickable {
+    -fx-background-color: #837ABA;
+    -fx-background-radius: 50px;
+    -fx-min-width: 80px;
+    -fx-border-radius: 50px;
+    -fx-padding: 15px;
+}
+.leaderboard-entry {
+    -fx-max-height: 50px;
+}

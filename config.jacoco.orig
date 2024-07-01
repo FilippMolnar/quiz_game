@@ -1,0 +1,20 @@
+config {
+    coverage {
+        jacoco {
+            enabled
+            aggregateReportHtmlFile
+            aggregateReportXmlFile
+            additionalSourceDirs
+            additionalClassDirs
+        }
+<<<<<<< Updated upstream
+=======
+        jacocoTestReport {
+            reports {
+                xml {
+                    enabled false
+                }
+>>>>>>> Stashed changes
+
+    }
+}
